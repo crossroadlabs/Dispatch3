@@ -56,7 +56,7 @@ import Foundation
     }
     
     extension dispatch_qos_class_t {
-        static func fromDispatchQoS(qos: DispatchQoS) -> dispatch_qos_class_t {
+        static func from(dispatchQoS qos: DispatchQoS) -> dispatch_qos_class_t {
             return dispatch_qos_class_t(rawValue: qos.qosClass.rawValue)
         }
     }

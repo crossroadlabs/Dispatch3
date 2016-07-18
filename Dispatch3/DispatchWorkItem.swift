@@ -56,7 +56,7 @@ import Boilerplate
                     execute: () -> ()) {
             self.flags = flags
             self.group = group
-            self.block = dispatch_block_create_with_qos_class(dispatch_block_flags_t.from(flags), dispatch_qos_class_t.fromDispatchQoS(qos), Int32(qos.relativePriority), execute)
+            self.block = dispatch_block_create_with_qos_class(dispatch_block_flags_t.from(flags), dispatch_qos_class_t.from(dispatchQoS: qos), Int32(qos.relativePriority), execute)
         }
         
         public func perform() {
